@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El reto de cumpleaños de Erica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Música de fondo para la página inicial -->
+    <audio id="musica-inicio" autoplay loop>
+        <source src="music/inicio.mp3" type="audio/mp3">
+        Tu navegador no soporta el formato de audio.
+    </audio>
+
+    <!-- Pantalla de bienvenida -->
+    <div id="bienvenida" class="container">
+        <h1>¡Hola Erica!</h1>
+        <p>¿Estás lista para descubrir tu regalo?</p>
+        <p>Resuelve los enigmas y llega al final para recibir algo muy especial.</p>
+        <button onclick="empezarReto()">¡A por ello!</button>
+    </div>
+
+    <!-- Enigmas -->
+    <div id="enigmas" class="container" style="display: none;">
+        <!-- Enigma 1 -->
+        <div class="enigma" id="enigma1">
+            <p class="texto-enigma">Soy muy delgado<br>y muy alargado,<br>con firmeza uno<br>lo que tú has creado.<br>Soy tu aliado,<br>admiro tu destreza<br>creando belleza,<br>uniendo las piezas.</p>
+            <input type="text" id="respuesta1" placeholder="Respuesta...">
+            <button onclick="checkAnswer1()">Responder</button>
+            <p id="feedback1"></p>
+        </div>
+        
+        <!-- Enigma 2 -->
+        <div class="enigma" id="enigma2" style="display: none;">
+            <p class="texto-enigma">La diriges con amor,<br>aunque estés atareada,<br>te importan más los abrazos<br>que una lección apresurada.<br>Comparada con otras,<br>quizás es pequeña.<br>En ella las infancias<br>gracias a vos, son más risueñas.<br>¿Qué es?<br>(Puedes escribir su número)</p>
+            <input type="text" id="respuesta2" placeholder="Respuesta...">
+            <button onclick="checkAnswer2()">Responder</button>
+            <p id="feedback2"></p>
+        </div>
+        
+        <!-- Enigma 3 -->
+        <div class="enigma" id="enigma3" style="display: none;">
+            <p class="texto-enigma">La X se ha preguntado,<br>¿A cuánto me he igualado?<br>Ayúdala a encontrar su valor<br>y que brille su resplandor.</p>
+            <p class="texto-enigma">X = 2 * 25</p>
+            <input type="text" id="respuesta3" placeholder="Respuesta...">
+            <button onclick="checkAnswer3()">Responder</button>
+            <p id="feedback3"></p>
+        </div>
+        
+        <!-- Enigma 4 -->
+        <div class="enigma" id="enigma4" style="display: none;">
+            <p class="texto-enigma">Su sonrisa es magnética,<br>su mirada es poética.<br>¿Y su amistad? ¡súper épica!<br>Te doy una pista sintética:<br>Su nombre rima y es...</p>
+            <input type="text" id="respuesta4" placeholder="Respuesta...">
+            <button onclick="checkAnswer4()">Responder</button>
+            <p id="feedback4"></p>
+        </div>
+    </div>
+
+    <!-- Botón para mostrar el haiku en nueva página -->
+    <div id="regalo" class="container" style="display: none;">
+        <h2 id="final-message"></h2>
+        <button onclick="verRegalo()">Acá tu regalo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

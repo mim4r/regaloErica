@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiku para Erica</title>
+    <link rel="stylesheet" href="haiku.css">
+</head>
+<body>
+    <!-- Caja de regalo saltarina (gif) -->
+    <div id="caja-regalo">
+        <img src="images/caja-regalo.gif" alt="Caja de Regalo Saltarina" id="gif-caja">
+    </div>
+
+    <!-- Botón para abrir la caja y mostrar el haiku -->
+    <button id="abrir-btn" onclick="mostrarHaiku()">Abrir</button>
+
+    <!-- El haiku que aparecerá al hacer clic en el botón -->
+    <div id="haiku" style="display: none;">
+        <h1>Un haiku para Erica</h1>
+        <p>El presente. Soy.<br>La flor se descubre al sol,<br>el aroma queda.</p>
+        <img src="images/feliz-cumpleanos.gif" alt="Haiku de Erica" />
+    </div>
+
+    <!-- Música de fondo para la página de Haiku -->
+    <audio id="musica-haiku">
+        <source src="music/haiku.mp3" type="audio/mp3">
+        <source src="music/haiku.ogg" type="audio/ogg">
+        Tu navegador no soporta el formato de audio.
+    </audio>
+
+    <script>
+        // Función que se ejecuta cuando se hace clic en "Abrir"
+        function mostrarHaiku() {
+            // Mostrar el haiku
+            document.getElementById("haiku").style.display = "block"; // Muestra el div con el haiku
+
+            // Reproducir la música
+            document.getElementById("musica-haiku").play();  // Reproduce la música
+
+            // Ocultar el gif de la caja de regalo
+            document.getElementById("caja-regalo").style.display = "none"; // Oculta el gif de la caja
+            // Ocultar el botón "Abrir"
+            document.getElementById("abrir-btn").style.display = "none"; // Oculta el botón
+        }
+        
+    </script>
+</body>
+</html>
